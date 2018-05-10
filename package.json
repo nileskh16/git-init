@@ -9,6 +9,10 @@
   "scripts": {
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nileskh16/git-init.git"
+  },
   "keywords": [
     "github",
     "init",

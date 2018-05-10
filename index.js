@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 //The trigger point of the application
 
 const chalk = require('chalk');
@@ -41,12 +43,13 @@ const getGitToken = async () => {
 
 const runApp = async () => {
 	try {
+		checkpwd();
 		const token = await getGitToken();
 		gitHelper.gitAuth(token);
 		const url = await repo.createRemoteRepo();
 		console.log(chalk.blue('The remote ssh url is -> ' + url))
 		await repo.createIgnoreFile();
-		const done = await repo.setupRepo();
+		const done = await repo.setupRepo(url);
 		if(done) console.log(chalk.green('All Done!'));
 	} catch (error) {
 		if(error) {
