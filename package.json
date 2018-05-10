@@ -1,6 +1,6 @@
 {
-  "name": "github-init",
-  "version": "1.0.0",
+  "name": "github-auto-init",
+  "version": "1.0.1",
   "description": "This tools helps you automate the task of creating github repo locally and then pushing it to remote repo with advanced UI",
   "main": "index.js",
   "bin": {
